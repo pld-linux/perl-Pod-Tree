@@ -55,14 +55,16 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 cp -a skeleton $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
+# confilcts with pod2html from perl-tools-pod
+rm -f $RPM_BUILD_ROOT%{_bindir}/pod2html
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
 %doc Changes README ToDo ToDo.Not
-# confilcts with pod2html from perl-tools-pod
-#%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/*
 %{perl_vendorlib}/Pod/*.pm
 %{perl_vendorlib}/Pod/Tree
 %{_mandir}/man?/*
