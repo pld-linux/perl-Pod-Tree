@@ -61,7 +61,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README ToDo ToDo.Not
-%attr(755,root,root) %{_bindir}/*
+# confilcts with pod2html from perl-tools-pod
+#%attr(755,root,root) %{_bindir}/*
 %{perl_vendorlib}/Pod/*.pm
 %{perl_vendorlib}/Pod/Tree
 %{_mandir}/man?/*
