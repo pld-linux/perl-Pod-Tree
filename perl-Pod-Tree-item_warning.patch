@@ -1,0 +1,14 @@
+diff -ur Pod-Tree-1.10.bak/lib/Pod/Tree/Node.pm Pod-Tree-1.10/lib/Pod/Tree/Node.pm
+--- Pod-Tree-1.10.bak/lib/Pod/Tree/Node.pm	2004-06-13 23:13:16.710568968 +0200
++++ Pod-Tree-1.10/lib/Pod/Tree/Node.pm	2004-06-13 23:15:58.733937672 +0200
+@@ -383,8 +383,8 @@
+ sub make_sequences
+ {
+     my $node          = shift;
+-    my $text          = $node->{'text'};
+-    my @tokens        = split /( [A-Z]<<+\s+ | [A-Z]< | \s+>>+ | > )/x, $text;
++    my $text          = $node->{'text'} || '';
++    my @tokens        = split /( [A-Z]<<+\s+ | [A-Z]< | \s+>>+ | > )/x, ($node->{'text'} || '');
+     my $sequences     = _parse_text(\@tokens);
+     $node->{children} = $sequences;
+ }
