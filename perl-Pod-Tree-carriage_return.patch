@@ -1,0 +1,18 @@
+--- Pod-Tree-1.10/Tree.pm~	2003-01-24 20:12:41.000000000 +0100
++++ Pod-Tree-1.10/Tree.pm	2004-06-05 21:01:09.425819920 +0200
+@@ -26,6 +26,7 @@
+     my(@lines) = ($line);
+     while ($line = $fh->getline)
+     {
++	$line =~ y/\r//d;
+ 	push @lines, $line;
+ 	$line eq "\n" and last;
+     }
+@@ -641,3 +642,7 @@
+ Copyright 1999-2003 by Steven McDougall. This module is free
+ software; you can redistribute it and/or modify it under the same
+ terms as Perl itself.
++
++=cut
++
++# vim: ts=8 sw=4 noet
