@@ -8,13 +8,13 @@
 Summary:	Pod::Tree - create a static syntax tree for a POD
 Summary(pl):	Pod::Tree - tworzenie statycznych drzew sk³adniowych dla POD
 Name:		perl-Pod-Tree
-Version:	1.10
-Release:	3
+Version:	1.11
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	b7558bc5607560b24694d7c2ffdf3d71
+# Source0-md5:	bf6c249384d45c2fd4e6e25cab449de4
 Patch0:		%{name}-carriage_return.patch
 Patch1:		%{name}-item_warning.patch
 BuildRequires:	perl-devel >= 1:5.8.0
