@@ -6,7 +6,7 @@
 %define		pdir	Pod
 %define		pnam	Tree
 Summary:	Pod::Tree - create a static syntax tree for a POD
-Summary(pl):	Pod::Tree - tworzenie statycznych drzew sk≥adniowych dla POD
+Summary(pl.UTF-8):   Pod::Tree - tworzenie statycznych drzew sk≈Çadniowych dla POD
 Name:		perl-Pod-Tree
 Version:	1.11
 Release:	1
@@ -32,10 +32,10 @@ Pod::Tree parses a POD into a static syntax tree. Applications walk
 the tree to recover the structure and content of the POD. See
 Pod::Tree::Node manual for a description of the tree.
 
-%description -l pl
-Pod::Tree przekszta≥ca POD na statyczne drzewo sk≥adniowe. Aplikacje
-wÍdruj± po drzewie w celu uzyskania struktury i zawarto∂ci z POD. Opis
-drzewa moøna znaleºÊ w manualu do Pod::Tree::Node.
+%description -l pl.UTF-8
+Pod::Tree przekszta≈Çca POD na statyczne drzewo sk≈Çadniowe. Aplikacje
+wƒôdrujƒÖ po drzewie w celu uzyskania struktury i zawarto≈õci z POD. Opis
+drzewa mo≈ºna znale≈∫ƒá w manualu do Pod::Tree::Node.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
