@@ -24,6 +24,7 @@ BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	perl-HTML-Stream
 BuildRequires:	perl-Pod-Escapes
 BuildRequires:	perl-Text-Template
+BuildRequires:	perl-IO >= 1.23
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
