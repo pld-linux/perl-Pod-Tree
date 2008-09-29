@@ -22,9 +22,9 @@ BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl-HTML-Stream
+BuildRequires:	perl-IO >= 1.23
 BuildRequires:	perl-Pod-Escapes
 BuildRequires:	perl-Text-Template
-BuildRequires:	perl-IO >= 1.23
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -69,8 +69,13 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README ToDo ToDo.Not
-%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/perl2html
+%attr(755,root,root) %{_bindir}/pods2html
+%attr(755,root,root) %{_bindir}/podtree2html
 %{perl_vendorlib}/Pod/*.pm
 %{perl_vendorlib}/Pod/Tree
-%{_mandir}/man?/*
+%{_mandir}/man1/perl2html.1p*
+%{_mandir}/man1/pods2html.1p*
+%{_mandir}/man1/podtree2html.1p*
+%{_mandir}/man3/Pod::Tree*.3pm*
 %{_examplesdir}/%{name}-%{version}
