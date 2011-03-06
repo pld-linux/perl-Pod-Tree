@@ -21,10 +21,10 @@ URL:		http://search.cpan.org/dist/Pod-Tree/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-BuildRequires:	perl-HTML-Stream
+BuildRequires:	perl-HTML-Stream >= 1.49
 BuildRequires:	perl-IO >= 1.23
-BuildRequires:	perl-Pod-Escapes
-BuildRequires:	perl-Text-Template
+BuildRequires:	perl-Pod-Escapes >= 1.02
+BuildRequires:	perl-Text-Template >= 1
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
