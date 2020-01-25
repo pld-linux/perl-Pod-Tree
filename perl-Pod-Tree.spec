@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Pod
 %define		pnam	Tree
 Summary:	Pod::Tree - create a static syntax tree for a POD
